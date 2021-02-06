@@ -1,0 +1,56 @@
+div.containers
+{
+    width: 60%;
+    height: fit-content;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0 auto;
+    margin-top: 30px;
+
+    text-align: center;
+}
+
+div.container
+{
+    min-height: 200px;
+    border: 1px solid var(--black-faded);
+}
+div.container:hover
+{
+    border-color: var(--black-less-faded);
+}
+
+
+h2
+{
+    text-transform: uppercase;
+    font-size: 2em;
+
+    padding: 0.1em 0.5em;
+}
+p
+{
+    font-size: 1.4em;
+    padding: 0.2em 0.4em;
+
+    cursor: move;
+}
+.dragging
+{
+    opacity: 0.5;
+}
+
+@media screen and (max-width : 950px)
+{
+    div.containers
+    {
+        flex-direction: column;
+        width: 90%;
+    }
+    div.container:nth-child(2)
+    {
+        margin: 1em 0;
+    }
+}

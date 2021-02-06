@@ -1,0 +1,117 @@
+*
+{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --text : white;
+    --black-faded : rgba(255, 255, 255, 0.2);
+    --black-less-faded : rgba(255, 255, 255, 0.4);
+    --bg-clr: pink;
+    --placeholder-clr: rgba(255, 255, 255, 0.664);
+}
+
+body
+{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+
+    /* display: flex;
+    flex-direction: column; */
+
+    background: var(--bg-clr);
+    color: var(--text);
+}
+
+
+
+h1
+{
+    font-size: 3em;
+    padding: .4em;
+
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+
+    /* background: red; */
+}
+
+div.addTask
+{
+    width: 50%;
+    padding: 0.1em;
+
+    margin: 0 auto;
+    margin-top: 20px;
+
+    display: flex;
+}
+
+input
+{
+    all: unset;
+
+    width: 75%;
+    font-size: 2em;
+
+    padding: 0.2em 0.4em;
+}
+input::placeholder
+{
+    text-align: center;
+    color: var(--placeholder-clr);
+}
+
+button
+{
+    all: unset;
+
+    width: 10%;
+    margin-left: auto;
+
+    font-size: 2em;
+    text-align: center;
+
+    cursor: pointer;
+}
+@media screen and (max-width:768px)
+{
+    h1
+    {
+        font-size: 2em;
+    }
+    h1, div.addTask
+    {
+        width: 90%;
+    }
+    button
+    {
+        width: 20%;
+    }
+    input
+    {
+        width: 70%;
+    }
+}
+
+h1, input, button, h2, p
+{
+    background: var(--black-faded);
+
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+
+    border: 1px solid var(--black-less-faded);
+
+}
+h1:hover, input:hover, button:hover, h2:hover, p:hover
+{
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+    background: var(--black-less-faded);
+}   
