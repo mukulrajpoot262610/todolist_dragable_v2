@@ -42,7 +42,7 @@ p
     opacity: 0.5;
 }
 
-@media screen and (max-width : 950px)
+@media screen and (max-width : 1050px)
 {
     div.containers
     {
